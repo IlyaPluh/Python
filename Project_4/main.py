@@ -39,4 +39,15 @@ for item in range(0, 20, 2):
         continue
 print("End_iteration =", item)
 
+i = 1
+n = 1
+while i < 10:
+    while n < 10:
+        result = i * n
+        print(result, end="\t")
+        n += 1
+    i += 1
+    n = 1
+    print("\n")
+
 
