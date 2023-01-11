@@ -25,21 +25,38 @@ l = ['webtest1@gmail.com',
      'cyberdesk@gmail.com',
      'supportonlinetest@gmail.com'
      ]
-
+k=[]
+for i in l:
+     if 'test' in i:
+          k.append(i)
+print(k)
 
 
 # 5. Найти самое маленькое число в списке
 l = [3,0,4,5,8,9,10,44,22,50,-1,79,54,-28,91]
-
+print(min(l))
 
 # 6. Сравнить 2 строки без учёта регистра
-
+str1 = 'IlyA'
+str2 = 'iLYa'
+print(str1.lower() == str2.lower())
 
 
 # 7. Проверить является ли массив подмножеством другого массива
-l1 = [1,4,6]
-l2 = [9,5,1,10,4,33,2,6,0,8]
-
+l1 = [5,6,6,1]
+l2 = [9,5,1,10,4,33,2,6,8]
+l1.sort()
+l2.sort()
+c = 0
+p = 0
+for i in l1:
+     for j in range(p, len(l2)):
+          if i == l2[j]:
+               c+=1
+               p = j+1
+               # print(i, l2[j])
+               break       
+print(c == len(l1))
 
 # 8. Напишите функцию, которая принимает строку и
 # возвращает количество букв английского алфавита,
