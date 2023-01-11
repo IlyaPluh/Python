@@ -87,7 +87,8 @@ def foo(string):
 print(foo('test'))
 print(foo('tes'))
 
-#10. Напишите функцию, которая проверяет сложность пароля. Функция проверяет ряд условий и оценивает сложность пароля. За каждое выполненое условие пароль получает бал.
+#10. Напишите функцию, которая проверяет сложность пароля. Функция проверяет ряд условий и оценивает сложность пароля. 
+# За каждое выполненое условие пароль получает бал.
 # Если выполняется одно условие - функция возвращает 1, если выполненяется 5 условий - функция вернет 5.
 # Условия которые нужно проверить:
 # длина пароля не меньше 6 символов,
@@ -101,4 +102,21 @@ numbers = "0123456789"
 lower_case = "abcdefghijklmnopqrstuvwxyz"
 upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 special_characters = "!@#$%^&*()-+"
+
+def check(string):
+     count = 0
+     if len(string) >= 6:
+          count += 1
+     if (next((el for el in string if el in numbers), 'Not')) != 'Not':
+          count+=1
+     if (next((el for el in string if el in upper_case), 'Not')) != 'Not':
+          count+=1
+     if (next((el for el in string if el in lower_case), 'Not')) != 'Not':
+          count+=1
+     if (next((el for el in string if el in special_characters), 'Not')) != 'Not':
+          count+=1     
+     return(count)
+print(check('23aS@jGG44'))
+print(check('aS@jGG'))
+print(check('aS'))
 
