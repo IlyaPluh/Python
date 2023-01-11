@@ -52,16 +52,28 @@ p = 0
 for i in l1:
      for j in range(p, len(l2)):
           if i == l2[j]:
-               c+=1
+               c += 1
                p = j+1
-               # print(i, l2[j])
                break       
 print(c == len(l1))
 
 # 8. Напишите функцию, которая принимает строку и
 # возвращает количество букв английского алфавита,
 # которые встречаются больше чем 1 раз.
-
+str = 'attachment'
+abc = 'qwertyuiopasdfghjklzxcvbnm'
+for i in abc:
+     c = 0
+     for j in str:
+          if j==i:
+               c+=1
+     if c >= 2:
+          print(i, 'est', c, 'raz')
+          
+def foo(string):
+     abc = 'qwertyuiopasdfghjklzxcvbnm'
+     return {i: string.count(i) for i in abc if string.count(i) > 1}
+print(foo('attachment'))
 
 # 9. Напишите функцию, которая принимает строки.
 # Она должна вернуть False, если в строке содержится две одинаковые буквы,
@@ -70,7 +82,10 @@ print(c == len(l1))
 # Две в в «Здравствуйте», три a в «Александра».
 # no_duplicate_letters("Всегда дожимай до конца") ➞ True
 # Две в в «Здравствуйте», три a в «Александра».
-
+def foo(string):
+     return len(set(string)) == len(string)
+print(foo('test'))
+print(foo('tes'))
 
 #10. Напишите функцию, которая проверяет сложность пароля. Функция проверяет ряд условий и оценивает сложность пароля. За каждое выполненое условие пароль получает бал.
 # Если выполняется одно условие - функция возвращает 1, если выполненяется 5 условий - функция вернет 5.
