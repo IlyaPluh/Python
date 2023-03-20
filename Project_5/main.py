@@ -119,4 +119,3 @@ def check(string):
 print(check('23aS@jGG44'))
 print(check('aS@jGG'))
 print(check('aS'))
-
