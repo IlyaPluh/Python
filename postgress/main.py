@@ -1,5 +1,5 @@
 import psycopg2
-
+# pip install psycopg2-binary
 conn = psycopg2.connect(
     dbname = 'qa_ddl_31_28',
     user = 'padawan_user_28',
