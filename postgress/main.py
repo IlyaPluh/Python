@@ -7,7 +7,7 @@ conn = psycopg2.connect(
     host = '159.69.151.133',
     port = '5056'
 )
-
+ 
 cursor = conn.cursor()
 
 if conn:
