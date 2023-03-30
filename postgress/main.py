@@ -7,7 +7,7 @@ conn = psycopg2.connect(
     host = '159.69.151.133',
     port = '5056'
 )
- 
+
 cursor = conn.cursor()
 
 if conn:
@@ -24,4 +24,5 @@ if conn:
         print('id =', i[0], 'salary =', i[1])
         
     conn.commit()
-    conn.close()    
+    conn.close()
+    
