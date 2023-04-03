@@ -1,6 +1,6 @@
-import psycopg2
+import psycopg
 # pip install psycopg2-binary
-conn = psycopg2.connect(
+conn = psycopg.connect(
     dbname = 'qa_ddl_31_28',
     user = 'padawan_user_28',
     password = '24693',

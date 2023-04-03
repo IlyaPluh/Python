@@ -1,4 +1,4 @@
-import psycopg2
+import psycopg
 import names
 import secrets
 import string
@@ -6,7 +6,7 @@ import time
 
 # pip install psycopg2-binary
 
-conn = psycopg2.connect(
+conn = psycopg.connect(
     dbname = 'qa_ddl_31_28',
     user = 'padawan_user_28',
     password = '24693',
