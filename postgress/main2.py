@@ -50,7 +50,7 @@ for i in range(0,50):
         conn.commit()
 
         print(based_data)
-        time.sleep(.200)
+        time.sleep(.100)
         
         
 # truncate_query = 'truncate public.users'
