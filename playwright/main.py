@@ -1,0 +1,28 @@
+from playwright.sync_api import Page, expect
+
+def test_example(page: Page) -> None:
+    page.goto("https://5controls.com/")
+    page.get_by_role("button", name="Yes, I agree").click()
+    page.get_by_role("link", name="Go to slide 4").click()
+    page.locator("#cost-downtime-value").click()
+    page.locator("#downtime-hours-value").click()
+    page.get_by_text("800", exact=True).click()
+    page.get_by_text("800", exact=True).dblclick()
+    page.locator("#main-calc-block").get_by_role("img").nth(3).click()
+    page.locator("#main-calc-block").get_by_role("img").nth(3).click()
+    page.locator("#main-calc-block").get_by_role("img").nth(3).click()
+    page.get_by_text("Statistically, the average downtime is about 800 hours per year.").click()
+    page.locator("#downtime-value").click()
+    page.locator("#downtime-value").click()
+    page.locator("#downtime-value").click()
+    page.locator("#downtime-value").click()
+    page.locator("#downtime-value").click()
+    page.locator("#downtime-value").click()
+    page.get_by_text("Suddenly run out of stock? Our min/MAX system ensures that the stock level is al").click()
+    page.locator("#contact").click()
+    page.get_by_role("link", name="free trial").click()
+    page.get_by_placeholder("Business email*").click()
+    page.get_by_placeholder("Business email*").fill("sdgsggsgsdd")
+    page.get_by_role("button", name="Submit").click()
+    # page.screenshot({path: 'test-results/testpy.jpg'})
+    
